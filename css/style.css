@@ -10,14 +10,60 @@ html,
   margin: 0;
   padding: 0;
   width: 100%;
+  background-color: black;
+  color: lime;
 }
 
 /* Center the content in the browser window */
 .container {
-  margin: auto;
+  margin: 1rem auto 0 auto;
   text-align: center;
+  width: 70%;
 }
 
 .title {
   font-size: 3rem;
+  font-family: "Times New Roman";
+}
+
+#button-container {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.button {
+  width: 8rem;
+  height: 6rem;
+  margin: 1rem auto;
+  background: black;
+  border: 1px lime dashed;
+  font-size: 1.5rem;
+  color: lime;
+  font-family: "Times New Roman";
+}
+
+input[type="text"] {
+  font-size: 2rem;
+  font-family: "Times New Roman";
+  border: 0px;
+  margin: 1rem auto;
+  padding: 0 5px;
+  background: #212121;
+  height: 3rem;
+  width: 100%;
+  color: lime;
+  font-weight: bold;
+}
+
+input[type="text"]:focus {
+  outline: 1px solid lime;
+}
+
+#output {
+  font-size: 2rem;
+  margin: 1rem auto;
+  border: 1px solid darkgray;
+  word-wrap: break-word;
+  width: 100%;
 }
