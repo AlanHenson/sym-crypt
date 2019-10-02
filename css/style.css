@@ -60,6 +60,10 @@ input[type="text"]:focus {
   outline: 1px solid lime;
 }
 
+#help-text {
+  font-family: "Times New Roman";
+}
+
 #output {
   font-size: 2rem;
   margin: 1rem auto;
