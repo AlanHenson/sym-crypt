@@ -1,6 +1,6 @@
 {
-  "name": "Sym Crypt",
-  "short_name": "Crypt",
+  "name": "sym_crypt",
+  "short_name": "sym_crypt",
   "icons": [{
     "src": "images/hello-icon-128.png",
       "sizes": "128x128",
