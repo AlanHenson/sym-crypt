@@ -5,8 +5,6 @@ window.onload = () => {
     navigator.serviceWorker
              .register('./sw.js');
   }
-
-
 }
 
 const keyEl = document.getElementById('key');
@@ -14,6 +12,10 @@ const msgEl = document.getElementById('msg');
 const outEl = document.getElementById('output');
 
 function encryptStringWithXORtoHex(input,key) {
+  if(input.length === 0 || key.length === 0) {
+    return '. . .';
+  }
+
   var c = '';
   while (key.length < input.length) {
        key += key;
@@ -36,6 +38,10 @@ function encryptStringWithXORtoHex(input,key) {
 }
 
 function decryptHexWithXORtoString(input, key) {
+  if(input.length === 0 || key.length === 0) {
+    return '. . .';
+  }
+
   let d = '';
   while (key.length < Math.ceil(input.length/2)) {
     key += key;
