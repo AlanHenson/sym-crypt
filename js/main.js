@@ -10,6 +10,7 @@ window.onload = () => {
 const keyEl = document.getElementById('key');
 const msgEl = document.getElementById('msg');
 const outEl = document.getElementById('output');
+const helpTextEl = document.getElementById('help-text');
 
 function encryptStringWithXORtoHex(input,key) {
   var c = '';
@@ -57,6 +58,8 @@ function encrypt(event) {
   let message = msgEl.value;
   let output = encryptStringWithXORtoHex(message, key);
   outEl.innerHTML = output;
+
+  helpTextEl.innerHTML = 'Tap output to copy';
 }
 
 function decrypt(event) {
@@ -65,4 +68,20 @@ function decrypt(event) {
   let message = msgEl.value;
   let output = decryptHexWithXORtoString(message, key);
   outEl.innerHTML = output;
+
+  helpTextEl.innerHTML = 'Tap output to copy';
+}
+
+function copyText(event) {
+  event.preventDefault();
+
+  let range = document.createRange();
+  range.selectNode(document.getElementById('output'));
+  window.getSelection().removeAllRanges();
+  window.getSelection().addRange(range);
+
+  document.execCommand("copy");
+  window.getSelection().removeAllRanges();
+
+  helpTextEl.innerHTML = 'Copied';
 }
