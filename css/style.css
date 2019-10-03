@@ -43,7 +43,7 @@ html,
   font-family: "Times New Roman";
 }
 
-input[type="text"] {
+input {
   font-size: 2rem;
   font-family: "Times New Roman";
   border: 0px;
