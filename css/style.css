@@ -56,7 +56,7 @@ input {
   font-weight: bold;
 }
 
-input[type="text"]:focus {
+input:focus {
   outline: 1px solid lime;
 }
 
