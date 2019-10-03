@@ -57,7 +57,7 @@ function encrypt(event) {
   let key = keyEl.value;
   let message = msgEl.value;
   let output = encryptStringWithXORtoHex(message, key);
-  outEl.innerHTML = output;
+  outEl.textContent = output;
 
   helpTextEl.innerHTML = 'Tap output to copy';
 }
@@ -67,7 +67,7 @@ function decrypt(event) {
   let key = keyEl.value;
   let message = msgEl.value;
   let output = decryptHexWithXORtoString(message, key);
-  outEl.innerHTML = output;
+  outEl.textContent = output;
 
   helpTextEl.innerHTML = 'Tap output to copy';
 }
